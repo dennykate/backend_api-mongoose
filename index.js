@@ -31,6 +31,10 @@ app.use("/ads", adsRoutes);
 app.use("/admob-ads", admobAdsRoutes);
 app.use("/movie", movieRoutes);
 
+app.get("/", (req, res) => {
+  return res.send("sever running");
+});
+
 const CONNECTION_URL = process.env.NEXT_APP_ENV_CONNECTION_URL;
 const PORT = process.env.NEXT_APP_ENV_PORT;
 
